@@ -1,0 +1,44 @@
+/* Add your CSS styles here */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1db954;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+}
+
+main {
+    padding: 1rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    margin-bottom: 1rem;
+}
+
+.playlist,
+.albums {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.playlist-item,
+.album-item {
+    width: 25%;
+    padding: 0.5rem;
+}
+
+footer {
+    background-color: #1db954;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+}

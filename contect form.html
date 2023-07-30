@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <div class="container">
+        <form onsubmit="sendEmail(); return false;">
+            <h3>contact me</h3>
+            <input type="text" id="name" placeholder="enter your name" required>
+            <input type="email" id="email" placeholder="enter your email" required>
+            <input type="tel" id="phone" placeholder="enter your phone no" required>
+            <textarea id="message" rows="5" placeholder="enter your complaint in text mode"></textarea>
+            <button type="submit">submit</button>
+        </form>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail() {
+            Email.send({
+                SecureToken: "YOUR_SMTPJS_SECURE_TOKEN",
+                To: 'joshiayushjoshi12@gmail.com',
+                From: document.getElementById("email").value,
+                Subject: "New contact form enquiry",
+                Body: "Name: " + document.getElementById("name").value +
+                    "<br>Email: " + document.getElementById("email").value +
+                    "<br>Phone: " + document.getElementById("phone").value +
+                    "<br>Message: " + document.getElementById("message").value
+            }).then(
+                message => {
+                    alert("Message sent successfully");
+                    document.getElementById("name").value = "";
+                    document.getElementById("email").value = "";
+                    document.getElementById("phone").value = "";
+                    document.getElementById("message").value = "";
+                }
+            );
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    background-color: whitesmoke;
+}
+
+nav {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 65px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+nav ul li {
+    cursor: pointer;
+    margin: 20px;
+    border-radius: 12px;
+    background-color: black;
+    display: inline-block;
+}
+nav ul li:hover {
+    color: #0056b3;
+}
+
+nav ul li.search-bar {
+    display: flex;
+    align-items: flex-end;
+    border-radius: 12px;
+}
+
+nav ul li.search-bar form {
+    display: flex;
+    align-items: flex-end;
+    background-color: black;
+    padding-left: 600px;
+}
+
+nav ul li.search-bar label {
+    margin-right: 40px;
+    font-weight: bold;
+    color: white; /* Added to make the label white */
+    background-color: black;
+}
+
+nav ul li.search-bar input[type="text"] {
+    padding: 6px;
+    border: 2px solid black;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+nav ul li.search-bar button {
+    padding: 10px 12px;
+    margin-left: 12px;
+    border: none;
+    border-radius: 2px;
+    background-color: #57f69c;
+    color: #fff;
+    cursor: pointer;
+    font-size: 9px;
+}
+
+nav ul li.search-bar button:hover {
+    background-color: #0056b3;
+}
